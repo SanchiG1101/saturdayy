@@ -1,0 +1,117 @@
+<html>
+<head>
+    <title></title>
+</head>
+<style>
+
+    .container
+    {
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+      background-color:  #1034b7;
+    }
+    #yes
+    {
+       position: absolute;
+       margin-right: 150px;
+    }
+    #no
+    {
+       position: absolute;
+       margin-left: 150px;
+       transition: 0.5s;
+    }
+    .text
+    {
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 40px;
+     font-weight: bold;
+     color: black;
+     text-align: center;
+     margin-top: 20px;
+     margin-bottom: 0;
+    }
+    .gif
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+    .button
+    {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+    .btn
+    {
+    background-color: #eea65f;
+    color: black;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    }
+    .btnn
+    {
+        
+    
+    background-color: #eea65f;
+    color: black;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+    
+    }
+    .btnn:hover:hover {
+        transform: translate3d(-500px, -500px, 500px)
+        
+       /* transform: rotate(45deg) translateX(50px) scale(1.5);*/
+
+    }
+</style>
+<body style=" justify-content: center;
+align-items: center;
+height: 90vh;
+background-color: #1034b7;
+">
+  <div class="container">
+    <div>
+        
+       <div class="text">Hello Hello doll!!!</div>
+        <div class="text">Do you wanna go out with me on saturday?</div>
+        <div class="text">Are you free that day?</div>
+    </div>
+    <div class="gif">
+        <img src="pics/cat.png" height="300px" width="300px">
+    </div>
+    <br><br>
+    <div class="button">
+        <button class="btn" id="yes" onclick="nextpage()">YES</button>
+        <button class="btnn" id="no" onmouseover="movebutton()" onclick="movebutton()">NO</button>
+        <script>
+        function nextpage()
+        {
+            window.location.href="yes.html";
+        }
+        function movebutton()
+        {
+            var x=Math.random() * (window.innerWidth - document.getElementById('no').offsetWidth)-85;
+            var y=Math.random() * (window.innerHeight - document.getElementById('no').offsetHeight)-48;
+            document.getElementById('no').style.left='${x}px';
+            document.getElementById('no').style.top='${y}px';
+        }
+      </script>
+    </div>
+  </div>
+</body>
+</html>
